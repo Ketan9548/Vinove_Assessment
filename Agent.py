@@ -13,12 +13,12 @@ import schedule
 
 aws_access_key = os.getenv("AWS_ACCESS_KEY")
 aws_secret_key = os.getenv("AWS_SECRET_KEY")
-aws_buket_name = os.getenv("aws_s3_bucket")
+aws_buket_name = os.getenv("AWS_S3_BUCKET")  # Correct variable name
 
 s3 = boto3.client('s3', 
                   aws_access_key_id=aws_access_key,
-                  aws_secret_access_key=aws_secret_key,
-                  aws_buket_name=aws_buket_name)
+                  aws_secret_access_key=aws_secret_key)
+
 
 def load_config():
     try:
